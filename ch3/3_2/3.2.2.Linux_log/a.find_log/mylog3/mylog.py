@@ -10,12 +10,12 @@ def printlog(logfile, search_word, pre_rowcount, next_rowcount):
     index = logdata.find(search_word)
 
     if index >= 0 :
-        print "-" * 70
-        print "Log file : ", logfile
-        print "Find this word : ", search_word
-        print "-" * 70
-        print get_log_data(logdata, index, pre_rowcount, next_rowcount)
-        print "-" * 70
+        print ("-" * 70)
+        print ("Log file : ", logfile)
+        print ("Find this word : ", search_word)
+        print ("-" * 70)
+        print (get_log_data(logdata, index, pre_rowcount, next_rowcount))
+        print ("-" * 70)
         
 def get_log_data(logdata, start_index, pre_rowcount, next_rowcount) :
     enter_index = max(0, logdata.rfind("\n", 0, start_index))

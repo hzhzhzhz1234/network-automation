@@ -14,11 +14,11 @@ errcolor_except = '\x1b[36m'
 # 로그를 저장하기 위한 파일명(out_file_name) 인자 추가 수정
 def check(file_name, search_word, out_file_name) :
     if os.path.exists(file_name):
-        print "모니터링 시작 :", file_name
-        print "대상 : ", search_word
-        print "-" * 70
+        print ("모니터링 시작 :", file_name)
+        print ("대상 : ", search_word)
+        print ("-" * 70)
     else :
-        print "찾으려는 파일이 없습니다 :", file_name
+        print ("찾으려는 파일이 없습니다 :", file_name)
         
     index = 0
     while os.path.exists(file_name) :  
@@ -38,7 +38,7 @@ def check(file_name, search_word, out_file_name) :
             out_file.write(str(datetime.datetime.now()))
             out_file.write("\n" +("-" * 70) + "\n")
             out_file.write(data)
-            print "로그가 기록된 파일을 확인하세요 :", out_file_name
+            print ("로그가 기록된 파일을 확인하세요 :", out_file_name)
             out_file.close()
             # 코드 수정 완료
         else :
